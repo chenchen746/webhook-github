@@ -1,5 +1,13 @@
 spring:
   application:
     name: demo
+  ai:
+    openai:
+      api-key: 4454914dd7384e42a95b2938ab95b4c0
+#      model: deepseek-r1-distill-qwen-7b
+      base-url: http://172.22.1.160:30513/compatible-mode
+      chat:
+        options:
+          model: deepseek-r1-distill-qwen-7b
 server:
-  port: 38080
+  port: 8080
