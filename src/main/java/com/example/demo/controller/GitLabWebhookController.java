@@ -23,6 +23,8 @@ public class GitLabWebhookController {
     // 建议从配置文件或环境变量中获取
     private static final String GITLAB_WEBHOOK_SECRET = "123456";
 
+    private static String  testString="abc";
+
     /**
      * 接收GitLab WebHook事件
      *
