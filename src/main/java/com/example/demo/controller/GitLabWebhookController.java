@@ -43,6 +43,10 @@ public class GitLabWebhookController {
 
         // 日志记录接收到的事件
         logger.info("Received GitLab event: " + xGitlabEvent);
+        if(1==1)
+        {
+            return ResponseEntity.ok("WebHook received successfully");
+        }
 
         // 验证WebHook（根据配置的secret进行验证）
 //        if (!validateWebhook(xGitlabToken, xGitlabSignature, payload.toString())) {
