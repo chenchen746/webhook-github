@@ -1,5 +1,33 @@
 spring:
   application:
     name: demo
+  mcp:
+    server:
+      name: webmcv-mcp-server
+      version: 1.0.0
+      type: SYNC
+      instructions: "This server provides weather information tools and resources"
+      sse-message-endpoint: /mcp/messages
+      sse-endpoint: /sse
+      capabilities:
+        tool: true
+        resource: true
+        prompt: true
+        completion: true
+    client:
+      sse:
+        connections:
+          server1:
+            url: http://10.0.10.158:8080
+            sse-endpoint: /sse
+
+  ai:
+    openai:
+      api-key: aeb0a97d-9009-4f04-88e1-648d632c59fa
+      base-url: https://ark.cn-beijing.volces.com/api/v3/
+      chat:
+        options:
+          model: ep-20250501110800-8xqpc
+        completions-path: /chat/completions
 server:
-  port: 28080
+  port: 8080
