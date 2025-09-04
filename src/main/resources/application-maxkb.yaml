@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo
+  ai:
+    openai:
+      api-key: application-219f947d75ddf47be2726116df4434e0
+      base-url: http://172.22.5.219:28080/api/application/c58a41f2-3090-11f0-a166-0242c0a86402
+      chat:
+        options:
+          model: xxx
+        completions-path: /chat/completions
+server:
+  port: 8080
+
+
