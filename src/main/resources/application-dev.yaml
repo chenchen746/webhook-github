@@ -2,4 +2,4 @@ spring:
   application:
     name: demo
 server:
-  port: 28080
+  port: 38080
