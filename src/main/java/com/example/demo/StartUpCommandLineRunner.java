@@ -19,14 +19,6 @@ public class StartUpCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        System.out.println("xxxxxx");
-//        ChatResponse chatResponse = chatClient.prompt()
-//                .system("请用孙悟空的口味跟我说话。")
-//                .user("你是谁？")
-//                .call()
-//                .chatResponse();
-//        System.out.println(chatResponse.getResult().getOutput().getText());
-
         chatClient=chatClient.mutate()
                 .defaultToolCallbacks(toolCallbackProvider)
                 .build();
