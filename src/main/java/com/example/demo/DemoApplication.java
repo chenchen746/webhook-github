@@ -3,6 +3,10 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.BiConsumer;
+
 @SpringBootApplication
 public class DemoApplication {
 
@@ -38,6 +42,24 @@ public class DemoApplication {
 				break;
 			}
 		}
+	}
+
+	public static Map<String,Object> convertMap(Map<String,String> map)
+	{
+		Map<String,Object> ret=new HashMap<>();
+		map.forEach(new BiConsumer<String, String>() {
+			@Override
+			public void accept(String s, String s2) {
+				Object o=s2;
+				ret.put(s,o);
+			}
+		});
+		return ret;
+	}
+
+	public static String convertTimeStampString2DateTimeString(String timestampString)
+	{
+		return DateUtil.date(Long.valueOf(timestampString)).toString("yyyy-MM-dd HH:mm:ss");
 	}
 
 }
