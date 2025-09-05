@@ -57,9 +57,6 @@ public class DemoApplication {
 		return ret;
 	}
 
-	public static String convertTimeStampString2DateTimeString(String timestampString)
-	{
-		return DateUtil.date(Long.valueOf(timestampString)).toString("yyyy-MM-dd HH:mm:ss");
-	}
+
 
 }
